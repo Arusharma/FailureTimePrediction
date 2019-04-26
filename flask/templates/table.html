@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Python Programming Tutorials</title>
+    <style>
+		body { 
+		  background-color:#17A589  ; /* Green */
+		  color: #000000;
+		}
+        .bg1 { 
+            background-color: #17A589   ; /* Dark Blue */
+            color: #000000;
+            border-collapse: collapse;
+            border-style: solid;
+            width: 50%;
+		}
+        .table.table tr th {
+            border-bottom: 1px solid #000;
+        }
+        .table.table tr td {
+            border-bottom: 1px solid #000;
+        }
+	</style>
+</head>
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+	  <div class="navbar-header">
+		<a class="navbar-brand">ML TOOL</a>
+	  </div>
+	  <ul class="nav navbar-nav">
+		<li class="active"><a href="http://127.0.0.1:5000/">Home</a></li>
+		<li><a href="http://127.0.0.1:5000/GetData">Results</a></li>
+		<li><a href="http://127.0.0.1:5000/graphs">Graphs</a></li>
+	  </ul>
+	</div>
+  </nav>
+  <div class="container bg1">
+    <table class="table" >
+        <thead>
+                <tr>
+                    {% for col in colnames %}
+                    <th class="lead"><strong><u>{{ col }}</u></strong></th>
+                    {% endfor %}
+                </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                {% for col in colnames %}
+                <td><strong>{{ record[col] }}</strong></td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+    <body>
+        hi thee
+    </body>
+</html>
